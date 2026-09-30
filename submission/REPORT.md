@@ -6,7 +6,7 @@
 - **MSSV:** 2A202602737
 - **Lớp:** K4-L3B
 - **Repository URL:** https://github.com/hientran-ai/K4-L3B-Day13-Monitoring-LLMOps
-- **Commit SHA cuối:** cập nhật sau khi commit evidence
+- **Commit SHA nội dung/evidence dùng để chấm:** `2760f92`
 - **Challenge ID:** `day13-k4-l3b-monitoring-llmops-v1`
 - **Tên project Langfuse cá nhân:** `day13-k4-l3b-2A202602737`
 
@@ -108,5 +108,5 @@ Bộ ảnh chi tiết 01–14:
 - [x] Trace/prompt evidence thuộc project Langfuse cá nhân.
 - [x] Repository chạy lại được theo README.
 - [x] `.env`, secret, log runtime và môi trường ảo không được commit.
-- [ ] Cập nhật commit SHA cuối sau commit evidence.
+- [x] Đã ghi commit SHA chứa đầy đủ source, report và evidence.
 - [ ] Push commit cuối và nộp URL/SHA trên LMS/Codelabs.
