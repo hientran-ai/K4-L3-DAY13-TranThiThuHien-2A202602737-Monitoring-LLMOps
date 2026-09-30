@@ -6,7 +6,7 @@ alerts:
     type: symptom-based
     channel: slack
     slack_channel: "#k4-l3b-alerts"
-    owner: student-<MSSV>
+    owner: student-2A202602737
     runbook: docs/alerts.md#alert-1
   - name: HighErrorRate
     severity: critical
@@ -15,7 +15,7 @@ alerts:
     type: symptom-based
     channel: slack
     slack_channel: "#k4-l3b-alerts"
-    owner: student-<MSSV>
+    owner: student-2A202602737
     runbook: docs/alerts.md#alert-2
   - name: LowRetrievalSuccess
     severity: warning
@@ -24,5 +24,5 @@ alerts:
     type: symptom-based
     channel: slack
     slack_channel: "#k4-l3b-alerts"
-    owner: student-<MSSV>
+    owner: student-2A202602737
     runbook: docs/alerts.md#alert-3

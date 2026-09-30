@@ -18,7 +18,7 @@ Ví dụ dưới đây minh họa mức độ cụ thể cần có. Học viên 
   2. Lọc `data/logs.jsonl` trong khoảng đó, lấy một `correlation_id` có `latency_ms` cao.
   3. Mở trace cùng `correlation_id` trên Langfuse, so sánh các span chính để xác định bước nào bất thường.
 - Mitigation tạm thời: dựa trên evidence thực tế để rollback prompt, khôi phục cấu hình liên quan, tắt practice scenario hoặc giảm tải khi demo.
-- Owner: `student-<MSSV>`
+- Owner: `student-2A202602737`
 
 ## Alert 1
 
@@ -34,7 +34,7 @@ Ví dụ dưới đây minh họa mức độ cụ thể cần có. Học viên 
   2. Lọc `data/logs.jsonl` trong khoảng đó, chọn một `response_sent` có `latency_ms` cao và lấy `correlation_id`.
   3. Mở trace có cùng `correlation_id` trên Langfuse, so sánh duration của retrieval và generation.
 - Mitigation tạm thời: rollback prompt `production` nếu regression trùng với lần promote; nếu retrieval chậm thì tắt practice incident hoặc khôi phục cấu hình retrieval gần nhất.
-- Owner: `student-<MSSV>`
+- Owner: `student-2A202602737`
 
 ## Alert 2
 
@@ -50,7 +50,7 @@ Ví dụ dưới đây minh họa mức độ cụ thể cần có. Học viên 
   2. Lọc event `request_failed`, lấy `correlation_id`, `error_type`, `tool_name` và `tool_success` của một request đại diện.
   3. Mở trace cùng `correlation_id`, kiểm tra observation lỗi và status của retrieval/generation.
 - Mitigation tạm thời: tắt incident/config gây lỗi, rollback thay đổi gần nhất và chuyển sang prompt/config ổn định trong khi điều tra.
-- Owner: `student-<MSSV>`
+- Owner: `student-2A202602737`
 
 ## Alert 3
 
@@ -66,4 +66,4 @@ Ví dụ dưới đây minh họa mức độ cụ thể cần có. Học viên 
   2. Lọc log có `tool_name=retrieval` và `tool_success=false`, sau đó lấy một `correlation_id` đại diện.
   3. Mở trace tương ứng, kiểm tra input preview an toàn, status retrieval và số document trả về.
 - Mitigation tạm thời: khôi phục cấu hình/index retrieval ổn định, tắt incident practice và dùng fallback an toàn nếu hệ thống hỗ trợ.
-- Owner: `student-<MSSV>`
+- Owner: `student-2A202602737`
