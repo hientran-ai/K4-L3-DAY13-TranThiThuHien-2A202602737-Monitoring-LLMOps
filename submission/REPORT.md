@@ -5,7 +5,7 @@
 - **Họ và tên:** Trần Thị Thu Hiền
 - **MSSV:** 2A202602737
 - **Lớp:** K4-L3B
-- **Repository URL:** https://github.com/hientran-ai/K4-L3B-Day13-Monitoring-LLMOps
+- **Repository URL:** https://github.com/hientran-ai/K4-L3-DAY13-TranThiThuHien-2A202602737-Monitoring-LLMOps.git
 - **Commit SHA nội dung/evidence dùng để chấm:** `2760f92`
 - **Challenge ID:** `day13-k4-l3b-monitoring-llmops-v1`
 - **Tên project Langfuse cá nhân:** `day13-k4-l3b-2A202602737`
