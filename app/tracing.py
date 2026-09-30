@@ -4,6 +4,11 @@ import os
 from contextlib import contextmanager
 from typing import Any
 
+
+class _NoopObservation:
+    def update(self, **kwargs: Any) -> None:
+        return None
+
 try:
     from langfuse import get_client, observe, propagate_attributes
 
@@ -24,6 +29,10 @@ except ImportError:  # pragma: no cover - chỉ dùng khi chưa cài requirement
         def update_current_generation(self, **kwargs: Any) -> None:
             return None
 
+        @contextmanager
+        def start_as_current_observation(self, **kwargs: Any):
+            yield _NoopObservation()
+
     def get_client():
         return _DummyClient()
 
@@ -34,6 +43,18 @@ except ImportError:  # pragma: no cover - chỉ dùng khi chưa cài requirement
 
 def get_langfuse_client():
     return get_client()
+
+
+@contextmanager
+def start_observation(client: Any, **kwargs: Any):
+    """Start a Langfuse child observation, with a no-op fallback for tests/offline use."""
+    starter = getattr(client, "start_as_current_observation", None)
+    if not callable(starter):
+        yield _NoopObservation()
+        return
+
+    with starter(**kwargs) as observation:
+        yield observation
 
 
 def tracing_enabled() -> bool:
